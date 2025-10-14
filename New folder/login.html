@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Login/Signup Animation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+<div class="container" id="popup">
+  <!-- Close button -->
+  <button class="close-btn" id="closeBtn" type="button" aria-label="Close popup">&times;</button>
+
+  <div class="card" id="card">
+    <!-- FRONT: LOGIN -->
+    <div class="front">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <span class="flip-btn" role="button" tabindex="0">Sign Up</span></p>
+    </div>
+
+    <!-- BACK: SIGNUP -->
+    <div class="back">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <span class="flip-btn" role="button" tabindex="0">Login</span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Login Form Validation
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (this.checkValidity()) {
+      window.location.href = '404.html'; // Redirect only if valid
+    } else {
+      this.reportValidity(); // Show browser “Please fill out this field”
+    }
+  });
+
+  // Signup Form Validation
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (this.checkValidity()) {
+      window.location.href = '404.html'; // Redirect only if valid
+    } else {
+      this.reportValidity();
+    }
+  });
+</script>
+
+
+  <script src="loginscript.js"></script>
+</body>
+</html>

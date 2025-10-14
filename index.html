@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Website</title>
+  <!--ICONSCOUT CDN-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    body {
+        background-image: url("./images/Medium\ synthetic\ swirl\ finish_\ Nicely\ applied_.jpg");
+    }
+
+    /* Hide dropdown by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  list-style: none;
+  padding: 5px 0;
+  min-width: 140px;
+  z-index: 10;
+}
+
+/* When active class is added via JS */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* Style dropdown links */
+.dropdown-menu li a {
+  padding: 8px 12px;
+  color: #000;
+  text-align: left;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background: #628B61;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav__container">
+    <a href="index.html"><img src="./images/logo.png"></a>
+    <ul class="nav__menu">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle">Home ▼</a>
+  <ul class="dropdown-menu">
+    <li><a href="index.html">Home Page 1</a></li>
+    <li><a href="index2.html">Home Page 2</a></li>
+  </ul>
+</li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+    <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+  </div>
+</nav>
+
+  <header>
+    <div class="container header__container">
+        <div class="header__left">
+            <h1>The expert in anything was 
+                once a beginner</h1>
+                <a href="./New folder/login.html" class="btn btn-primary">Login</a>
+                <a href="./index2.html" class="btn btn-primary1">Go Home Page 2</a>
+        </div>
+        <div class="header__right">
+            <div class="header__right-image">
+                <img src="./images/header.png">
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <section class="categories">
+  <div class="container categories__container">
+    <div class="categories__left">
+      <h1>Categories</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatum ab in corporis quis molestiae
+        possimus vel temporibus error. Voluptatem cum harum ipsum facilis ducimus veritatis optio, nihil qui provident.
+      </p>
+      <a href="./404.html" class="btn">Learn More</a>
+    </div>
+    
+    <div class="categories__right">
+        <article class="category">
+            <span class="category__icon">
+            <i class="uil uil-bitcoin-circle"></i></span>
+            <h5>Blockchain</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+
+                <article class="category">
+            <span class="category__icon">
+                <i class="uil uil-palette"></i></span>
+            <h5>Graphic Design</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+
+                <article class="category">
+            <span class="category__icon"><i class="uil uil-usd-circle"></i></span>
+            <h5>Finance</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+
+                <article class="category">
+            <span class="category__icon"><i class="uil uil-megaphone"></i></span>
+            <h5>Marketing</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+
+                <article class="category">
+            <span class="category__icon"><i class="uil uil-music"></i></span>
+            <h5>Music</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+
+                <article class="category">
+            <span class="category__icon"><i class="uil uil-puzzle-piece"></i></span>
+            <h5>Business</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, debitis.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="courses">
+    <h2>Our Popular Courses</h2>
+    <div class="container courses__container">
+        <article class="course">
+            <div class="course__image">
+                <img src="./images/course1.jpg">
+            </div>
+            <div class="course__info">
+                <h4>Social Media Website</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa ratione modi? Aut, repellat. Deserunt, dolorum?</p>
+                <a href="./404.html" class="btn btn-primary">Learn More</a>
+            </div>
+            </article>
+
+                <article class="course">
+            <div class="course__image">
+                <img src="./images/course2.jpg">
+            </div>
+            <div class="course__info">
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa ratione modi? Aut, repellat. Deserunt, dolorum?</p>
+                <a href="./404.html" class="btn btn-primary">Learn More</a>
+            </div>
+            </article>
+
+                <article class="course">
+            <div class="course__image">
+                <img src="./images/course3.jpg">
+            </div>
+            <div class="course__info">
+                <h4>Responsive UX Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus culpa ratione modi? Aut, repellat. Deserunt, dolorum?</p>
+                <a href="./404.html" class="btn btn-primary">Learn More</a>
+            </div>
+            </article>
+    </div>
+</section>
+
+
+
+<section class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="container faqs__container">
+        <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>What types of courses are available?</h4>
+                <p>We offer a variety of courses, including online, offline, short-term, and long-term programs in fields such as technology, business, and personal development.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Will I get a certificate after completion?</h4>
+                <p>Yes. After successfully completing the course requirements, you will receive a digital certificate that you can download.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Can I get a refund if I’m not satisfied?</h4>
+                <p>Refund policies vary by course. Please check the refund/return policy mentioned during enrollment.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Who do I contact for support?</h4>
+                <p>For any queries, you can email our support team at support@example.com or use the live chat option on our website.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>What study materials will I get?</h4>
+                <p>You’ll receive access to video lectures, eBooks, assignments, quizzes, and sometimes project files or case studies</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>What types of courses are available?</h4>
+                <p>We offer a variety of courses, including online, offline, short-term, and long-term programs in fields such as technology, business, and personal development.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Do I need specific software or tools?</h4>
+                <p>Some technical courses may require software (like Python, Photoshop, MS Excel). Instructions and installation guides are provided.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Will I have lifetime access?</h4>
+                <p>Most courses provide lifetime access to study materials. However, live session recordings may be available only for a limited period (e.g., 6–12 months).</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>How do assessments work?</h4>
+                <p>Assessments include quizzes, assignments, projects, or exams depending on the course. Some courses also include peer reviews.</p>
+            </div>
+        </article>
+
+                <article class="faq">
+            <div class="faq__icon"><i class="uil uil-plus"></i></div>
+            <div class="question__answer">
+                <h4>Do you offer career support?</h4>
+                <p>Yes. Selected professional programs include resume reviews, mock interviews, and job placement assistance.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+<section class="container testimonials__container mySwiper">
+    <h2>Students Testimonials</h2>
+    <div class="swiper-wrapper">
+        <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar1.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Diyash</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+
+            <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar2.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Karthick</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+
+            <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar3.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Rayan</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+
+            <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar4.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Joshwa</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+
+            <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar5.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Nandhakumar</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+
+            <article class="testimonial swiper-slide">
+            <div class="avatar">
+                <img src="./images/avatar6.jpg">
+            </div>
+            <div class="testimonial__info">
+                <h5>Anand</h5>
+                <small>Student</small>
+            </div>
+            <div class="testimonial__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eum aut odit asperiores pariatur cumque vero.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__1">
+            <a href="index.html" class="footer__logo"><h4>STACKLY</h4></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="Permalinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__3">
+            <h4>Primary</h4>
+            <ul class="privacy">
+                <li><a href="404.html">Privacy Policy</a></li>
+                <li><a href="404.html">Terms and conditions</a></li>
+                <li><a href="404.html">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__4">
+            <h4>Contact Us</h4>
+            <div>
+                <p>+91 9047366578</p>
+                <p>info@thestackly.com</p>
+            </div>
+
+            <ul class="footer__socials">
+                <li>
+                    <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="404.html"><i class="uil uil-instagram-alt"></i></a>
+                </li>
+                <li>
+                    <a href="404.html"><i class="uil uil-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="404.html"><i class="uil uil-linkedin-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    <!-- Right Side: Map -->
+    <div class="footer-right">
+        <h4>Google Map</h4>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.423930519364!2d80.27071897476289!3d13.082680587241803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e06b1e6c0b%3A0x6a9f5c31d10f6e3!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1696751888888!5m2!1sen!2sin"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; STACKLY</small>
+        </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+
+<script>
+        var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      //when window width is >= 600px
+      breakpoints: {
+        600: {
+          slidesPerView: 2,  
+        }
+      }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
+  
