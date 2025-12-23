@@ -280,40 +280,76 @@ header {
   position: relative;
   top: 5rem;
   overflow: hidden;
-  height: auto;           /* allow content height */
+  height: auto;
   margin-bottom: 5rem;
 }
 
+/* Container layout stays SAME */
 .header__container {
-  display: flex;          /* change grid to flex */
-  flex-direction: column; /* stack items vertically */
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 3rem;
 }
 
-/* H1 on top */
-.header__left h1 {
-  margin: 0;
-  max-width: 900px;       /* keeps text readable */
+/* =============================== */
+/* TEXT REVEAL ANIMATION */
+/* =============================== */
+
+.header__left h1,
+.header__left p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
 }
 
-/* Image below content */
+/* =============================== */
+/* IMAGE ANIMATION */
+/* =============================== */
+
 .header__right-image img {
   width: 100%;
-  max-width: 500px;       /* control image size */
+  max-width: 500px;
   height: auto;
-  animation: imageJump 2.5s infinite ease-in-out;
+
+  opacity: 0;
+  transform: scale(0.9) translateY(30px);
+  transition: all 1s ease;
 }
 
-/* Jumping animation */
-@keyframes imageJump {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* =============================== */
+/* ACTIVE STATE */
+/* =============================== */
+
+header.animate .header__left h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header.animate .header__left p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+header.animate .header__right-image img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition-delay: 0.6s;
+
+  /* Floating loop after entry */
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* =============================== */
+/* FLOATING EFFECT */
+/* =============================== */
+
+@keyframes floatImage {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
 

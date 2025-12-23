@@ -22,6 +22,24 @@
      body {
         background-image: url("./images/Medium\ synthetic\ swirl\ finish_\ Nicely\ applied_.jpg");
     }
+
+    .header__left h1 {
+  overflow: hidden;
+  white-space: wrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 2s steps(40, end) forwards,
+             blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
 </style>
 <body>
 <!-- NAVBAR START -->
@@ -29,7 +47,7 @@
 
   <div class="nav__header">
     <div class="nav__logo">
-      <a href="index.html">
+      <a href="index1.html">
         <img src="./images/logo.png" alt="logo" class="logo-img">
       </a>
     </div>
@@ -71,7 +89,7 @@
 
     <div class="header__right">
       <div class="header__right-image">
-        <img src="./images/header.png" alt="Education">
+        <img src="./images/header.webp" alt="Education">
       </div>
     </div>
   </div>
@@ -208,9 +226,9 @@
         <div class="footer__3">
             <h4>Primary</h4>
             <ul class="privacy">
-                <li><a href="404.html">Privacy Policy</a></li>
-                <li><a href="404.html">Terms and conditions</a></li>
-                <li><a href="404.html">Refund Policy</a></li>
+                <li><a href="4041.html">Privacy Policy</a></li>
+                <li><a href="4041.html">Terms and conditions</a></li>
+                <li><a href="4041.html">Refund Policy</a></li>
             </ul>
         </div>
 
@@ -223,16 +241,16 @@
 
             <ul class="footer__socials">
                 <li>
-                    <a href="404.html"><i class="uil uil-facebook-f"></i></a>
+                    <a href="4041.html"><i class="uil uil-facebook-f"></i></a>
                 </li>
                 <li>
-                    <a href="404.html"><i class="uil uil-instagram-alt"></i></a>
+                    <a href="4041.html"><i class="uil uil-instagram-alt"></i></a>
                 </li>
                 <li>
-                    <a href="404.html"><i class="uil uil-twitter"></i></a>
+                    <a href="4041.html"><i class="uil uil-twitter"></i></a>
                 </li>
                 <li>
-                    <a href="404.html"><i class="uil uil-linkedin-alt"></i></a>
+                    <a href="4041.html"><i class="uil uil-linkedin-alt"></i></a>
                 </li>
             </ul>
         </div>
@@ -273,6 +291,12 @@
         }
       }
     });
+
+      window.addEventListener("load", () => {
+    document.querySelectorAll("header").forEach(header => {
+      header.classList.add("animate");
+    });
+  });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script1.js"></script>

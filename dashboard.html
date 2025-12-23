@@ -15,41 +15,77 @@
       font-size: 24px;
     }
 
-    .new-courses {
-      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 25px;
-      margin-bottom: 60px;
-    }
+.new-courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
 
-    .course-card {
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
+.course-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  cursor: default; 
+  box-shadow: 0 8px 24px rgba(26, 37, 66, 0.08);
+  position: relative;
+  overflow: hidden;
 
-    .course-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+  transform: translateY(30px);
+  opacity: 0;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.6s ease;
+}
 
-    .course-icon {
-      font-size: 40px;
-      color: white;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
+.course-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.course-card.show:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(26, 37, 66, 0.15);
+}
+
+
+/* subtle top glow like analytics */
+.course-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(65, 105, 225, 0.08),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.course-card:hover::before {
+  opacity: 1;
+}
+
+.course-icon {
+  font-size: 36px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  transition: transform 0.35s ease;
+}
+
+.course-card:hover .course-icon {
+  transform: scale(1.08) rotate(-2deg);
+}
+
 
     .course-card:nth-child(2) .course-icon {
       background: linear-gradient(135deg, #f7971e, #ffd200);
@@ -67,42 +103,44 @@
       background: linear-gradient(135deg, #11998e, #38ef7d);
     }
 
-    .course-title {
-      font-size: 18px;
-      color: #1a2542;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+.course-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a2542;
+  margin-bottom: 6px;
+}
 
-    .course-lessons {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 15px;
-    }
+.course-lessons {
+  font-size: 13px;
+  color: #8a94a6;
+  margin-bottom: 16px;
+}
+
 
     .members {
       display: flex;
       align-items: center;
     }
 
-    .members img {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      margin-left: -8px;
-      box-shadow: 0 0 0 2px #f7f8fc;
-      transition: transform 0.2s;
-    }
+.members img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -8px;
+  background: #fff;
+  box-shadow: 0 0 0 2px #f1f3f9;
+  transition: transform 0.25s ease;
+}
 
     .members img:first-child {
       margin-left: 0;
     }
 
-    .members img:hover {
-      transform: scale(1.15);
-      z-index: 2;
-    }
+.members img:hover {
+  transform: scale(1.2);
+  z-index: 5;
+}
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -113,6 +151,12 @@
         font-size: 16px;
       }
     }
+
+.sidebar span{
+  color: black;
+}
+
+ 
   </style>
   <body>
     <!-- Header Bar -->
@@ -142,12 +186,13 @@
     </div>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-      <a class="nav-item active">
-        <div class="nav-icon">📊</div>
-        <div class="nav-label">Dashboard</div>
-      </a>
-    </div>
+<div class="sidebar">
+  <a href="index.html" class="nav-item back-home">
+    <span class="back-icon">←</span>
+    <span class="nav-label">Back Home</span>
+  </a>
+</div>
+
 
 
     <!-- Main Content -->
@@ -219,17 +264,6 @@
             Monitor your learning progress and academic performance
           </p>
         </div>
-
-  <!-- <div style="display: flex; padding: 50px;">
-    <div class="date-filter" id="date-filter">
-      <span id="current-date"></span>
-      <span style="margin-left: 10px">▼</span>
-
-      <div class="date-picker" id="date-picker">
-        <input type="date" id="date-input">
-      </div>
-    </div>
-  </div> -->
       </div>
 
  
