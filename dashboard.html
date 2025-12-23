@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduTrack Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <style>
+
+    h2 {
+      color: #1a2542;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .new-courses {
+      display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .course-icon {
+      font-size: 40px;
+      color: white;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .course-card:nth-child(2) .course-icon {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+    }
+
+    .course-card:nth-child(3) .course-icon {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+
+    .course-card:nth-child(4) .course-icon {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    }
+
+    .course-card:nth-child(5) .course-icon {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+    }
+
+    .course-title {
+      font-size: 18px;
+      color: #1a2542;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .course-lessons {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .members {
+      display: flex;
+      align-items: center;
+    }
+
+    .members img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-left: -8px;
+      box-shadow: 0 0 0 2px #f7f8fc;
+      transition: transform 0.2s;
+    }
+
+    .members img:first-child {
+      margin-left: 0;
+    }
+
+    .members img:hover {
+      transform: scale(1.15);
+      z-index: 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .course-card {
+        padding: 15px;
+      }
+      .course-title {
+        font-size: 16px;
+      }
+    }
+  </style>
+  <body>
+    <!-- Header Bar -->
+<div class="header-bar">
+  <div class="brand-container">
+    <img src="stackly.png" alt="Stackly Logo" class="brand-logo-img" />
+    <!-- <div class="brand-name">Stackly</div> -->
+  </div>
+
+
+         <div style="display: flex; padding: 50px;">
+    <div class="date-filter" id="date-filter">
+      <span id="current-date"></span>
+      <span style="margin-left: 10px">▼</span>
+
+      <div class="date-picker" id="date-picker">
+        <input type="date" id="date-input">
+      </div>
+    </div>
+  </div>
+
+        <div class="user-profile">
+          <div class="user-avatar">MS</div>
+          <div>Mathika</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a class="nav-item active">
+        <div class="nav-icon">📊</div>
+        <div class="nav-label">Dashboard</div>
+      </a>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2>New Courses</h2>
+  <div class="new-courses">
+    <div class="course-card">
+      <div class="course-icon">🌍</div>
+      <div class="course-title">Geography</div>
+      <div class="course-lessons">12 lessons</div>
+      <div class="members">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg">
+        <img src="https://randomuser.me/api/portraits/men/36.jpg">
+        <img src="https://randomuser.me/api/portraits/women/60.jpg">
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">💻</div>
+      <div class="course-title">JavaScript Basics</div>
+      <div class="course-lessons">15 lessons</div>
+      <div class="members">
+        <img src="https://randomuser.me/api/portraits/men/15.jpg">
+        <img src="https://randomuser.me/api/portraits/women/40.jpg">
+        <img src="https://randomuser.me/api/portraits/men/54.jpg">
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">📷</div>
+      <div class="course-title">Photography</div>
+      <div class="course-lessons">8 lessons</div>
+      <div class="members">
+        <img src="https://randomuser.me/api/portraits/women/51.jpg">
+        <img src="https://randomuser.me/api/portraits/men/47.jpg">
+        <img src="https://randomuser.me/api/portraits/women/33.jpg">
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">🎨</div>
+      <div class="course-title">Design Fundamentals</div>
+      <div class="course-lessons">10 lessons</div>
+      <div class="members">
+        <img src="https://randomuser.me/api/portraits/men/20.jpg">
+        <img src="https://randomuser.me/api/portraits/women/28.jpg">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg">
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-icon">🧮</div>
+      <div class="course-title">Mathematics</div>
+      <div class="course-lessons">14 lessons</div>
+      <div class="members">
+        <img src="https://randomuser.me/api/portraits/men/8.jpg">
+        <img src="https://randomuser.me/api/portraits/women/25.jpg">
+        <img src="https://randomuser.me/api/portraits/men/60.jpg">
+      </div>
+    </div>
+  </div>
+
+      <!-- Dashboard Header -->
+      <div class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Student Analytics</h1>
+          <p class="dashboard-subtitle">
+            Monitor your learning progress and academic performance
+          </p>
+        </div>
+
+  <!-- <div style="display: flex; padding: 50px;">
+    <div class="date-filter" id="date-filter">
+      <span id="current-date"></span>
+      <span style="margin-left: 10px">▼</span>
+
+      <div class="date-picker" id="date-picker">
+        <input type="date" id="date-input">
+      </div>
+    </div>
+  </div> -->
+      </div>
+
+ 
+      <!-- Dashboard Grid -->
+      <div class="dashboard-grid">
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat-card">
+            <div class="stat-icon blue-gradient">📘</div>
+            <div class="stat-title">Active Courses</div>
+            <div class="stat-value">8</div>
+            <div class="stat-badge badge-blue">+2 New Enrolled</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon purple-gradient">🧮</div>
+            <div class="stat-title">Assignments Submitted</div>
+            <div class="stat-value">24</div>
+            <div class="stat-badge badge-purple">90% Completed</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon green-gradient">🎯</div>
+            <div class="stat-title">Average Score</div>
+            <div class="stat-value">89%</div>
+            <div class="stat-badge badge-green">+5% This Month</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon orange-gradient">⏰</div>
+            <div class="stat-title">Upcoming Deadlines</div>
+            <div class="stat-value">3</div>
+            <div class="stat-badge badge-orange">Due This Week</div>
+          </div>
+        </div>
+
+        
+
+        <!-- Performance Chart -->
+        <div class="revenue-chart-container">
+          <div class="chart-header">
+            <div class="chart-title">Study Time Distribution</div>
+            <div class="period-tabs">
+              <div class="period-tab">Daily</div>
+              <div class="period-tab active">Weekly</div>
+              <div class="period-tab">Monthly</div>
+            </div>
+          </div>
+
+          <div class="revenue-chart">
+            <div class="circular-chart">
+              <div class="donut-chart">
+                <div class="donut-hole">
+                  <div class="donut-total">35 hrs</div>
+                  <div class="donut-label">Total Study Time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-legend">
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #4169e1"></div>
+              <div>Web Develop: 10 hrs (28%)</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #9370db"></div>
+              <div>UI/UX: 8 hrs (23%)</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #43a047"></div>
+              <div>Languages: 9 hrs (26%)</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #ff9800"></div>
+              <div>Python: 8 hrs (23%)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Goals Container -->
+        <div class="performance-container">
+          <div class="chart-header">
+            <div class="chart-title">Learning Goals</div>
+            <div>🎓</div>
+          </div>
+
+          <div class="goal-progress">
+            <div class="goal-item">
+              <div class="goal-header">
+                <div class="goal-title">Course Completion</div>
+                <div class="goal-value">70% / 100%</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress progress-blue" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="goal-item">
+              <div class="goal-header">
+                <div class="goal-title">Assignments</div>
+                <div class="goal-value">18 / 20</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress progress-purple" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="goal-item">
+              <div class="goal-header">
+                <div class="goal-title">Study Hours</div>
+                <div class="goal-value">35 / 50 hrs</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress progress-green" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 40px;
+            "
+          >
+            <div style="text-align: center; flex: 1">
+              <div style="font-size: 32px; font-weight: 700; color: #4169e1">
+                5
+              </div>
+              <div style="font-size: 14px; color: #8a94a6">
+                Tasks Completed Today
+              </div>
+            </div>
+
+            <div style="text-align: center; flex: 1">
+              <div style="font-size: 32px; font-weight: 700; color: #43a047">
+                92%
+              </div>
+              <div style="font-size: 14px; color: #8a94a6">
+                Weekly Attendance
+              </div>
+            </div>
+
+            <div style="text-align: center; flex: 1">
+              <div style="font-size: 32px; font-weight: 700; color: #ff9800">
+                2
+              </div>
+              <div style="font-size: 14px; color: #8a94a6">Pending Tasks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script>
+  // ========================
+  // STUDY TIME INTERACTIVITY
+  // ========================
+
+  // Define study time data
+  const studyData = {
+    daily: {
+      total: "5 hrs",
+      subjects: [
+        { name: "Web Develop", hrs: "1.5 hrs", percent: "30%", color: "#4169e1" },
+        { name: "UI/UX", hrs: "1 hr", percent: "20%", color: "#9370db" },
+        { name: "Languages", hrs: "1.2 hrs", percent: "25%", color: "#43a047" },
+        { name: "Python", hrs: "1.3 hrs", percent: "25%", color: "#ff9800" },
+      ],
+    },
+    weekly: {
+      total: "35 hrs",
+      subjects: [
+        { name: "Web Develop", hrs: "10 hrs", percent: "28%", color: "#4169e1" },
+        { name: "UI/UX", hrs: "8 hrs", percent: "23%", color: "#9370db" },
+        { name: "Languages", hrs: "9 hrs", percent: "26%", color: "#43a047" },
+        { name: "Python", hrs: "8 hrs", percent: "23%", color: "#ff9800" },
+      ],
+    },
+    monthly: {
+      total: "140 hrs",
+      subjects: [
+        { name: "Web Develop", hrs: "38 hrs", percent: "27%", color: "#4169e1" },
+        { name: "UI/UX", hrs: "32 hrs", percent: "23%", color: "#9370db" },
+        { name: "Languages", hrs: "40 hrs", percent: "29%", color: "#43a047" },
+        { name: "Python", hrs: "30 hrs", percent: "21%", color: "#ff9800" },
+      ],
+    },
+  };
+
+  // Select DOM elements
+  const tabs = document.querySelectorAll(".period-tab");
+  const totalDisplay = document.querySelector(".donut-total");
+  const legendContainer = document.querySelector(".chart-legend");
+
+  // Function to update chart dynamically
+  function updateChart(period) {
+    const data = studyData[period];
+
+    // Animate number change (fade effect)
+    totalDisplay.style.opacity = 0;
+    legendContainer.style.opacity = 0;
+
+    setTimeout(() => {
+      totalDisplay.textContent = data.total;
+      totalDisplay.style.opacity = 1;
+
+      // Update legend dynamically
+      legendContainer.innerHTML = data.subjects
+        .map(
+          (s) => `
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: ${s.color}"></div>
+          <div>${s.name}: ${s.hrs} (${s.percent})</div>
+        </div>
+      `
+        )
+        .join("");
+
+      legendContainer.style.opacity = 1;
+    }, 250);
+  }
+
+  // Add click event for each tab
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all tabs
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Get selected period text (daily, weekly, monthly)
+      const period = tab.textContent.trim().toLowerCase();
+      updateChart(period);
+    });
+  });
+
+      // Optional: Add simple entry animation
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach((card, i) => {
+      card.style.opacity = 0;
+      card.style.transform = "translateY(30px)";
+      setTimeout(() => {
+        card.style.transition = "all 0.6s ease";
+        card.style.opacity = 1;
+        card.style.transform = "translateY(0)";
+      }, 150 * i);
+    });
+</script>
+
+<script src="dashboard.js"></script>
+  </body>
+</html>

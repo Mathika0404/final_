@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Education Website</title>
   <!--ICONSCOUT CDN-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
@@ -13,82 +13,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 
-  <style>
-    body {
+</head>
+<style>
+     body {
         background-image: url("./images/Medium\ synthetic\ swirl\ finish_\ Nicely\ applied_.jpg");
     }
 
-    /* Hide dropdown by default */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 6px;
-  list-style: none;
-  padding: 5px 0;
-  min-width: 140px;
-  z-index: 10;
+.header__left h1 {
+  overflow: hidden;
+  white-space: wrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 2s steps(40, end) forwards,
+             blink 0.7s infinite;
 }
 
-/* When active class is added via JS */
-.dropdown.active .dropdown-menu {
-  display: block;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-/* Style dropdown links */
-.dropdown-menu li a {
-  padding: 8px 12px;
-  color: #000;
-  text-align: left;
-  display: block;
+@keyframes blink {
+  50% { border-color: transparent }
 }
 
-.dropdown-menu li a:hover {
-  background: #628B61;
-  color: #fff;
-}
 </style>
-</head>
 <body>
-<nav>
-  <div class="container nav__container">
-    <a href="index.html"><img src="./images/logo.png"></a>
-    <ul class="nav__menu">
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle">Home ▼</a>
-  <ul class="dropdown-menu">
-    <li><a href="index.html">Home Page 1</a></li>
-    <li><a href="index2.html">Home Page 2</a></li>
-  </ul>
-</li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-    <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
-  </div>
-</nav>
+<!-- NAVBAR START -->
+<nav class="navbar">
 
-  <header>
-    <div class="container header__container">
-        <div class="header__left">
-            <h1>The expert in anything was 
-                once a beginner</h1>
-                <a href="./New folder/login.html" class="btn btn-primary">Login</a>
-                <a href="./index2.html" class="btn btn-primary1">Go Home Page 2</a>
-        </div>
-        <div class="header__right">
-            <div class="header__right-image">
-                <img src="./images/header.png">
-            </div>
-        </div>
+  <div class="nav__header">
+    <div class="nav__logo">
+      <a href="index.html">
+        <img src="./images/logo.png" alt="logo" class="logo-img">
+      </a>
     </div>
-  </header>
+
+    <!-- Mobile Menu Button -->
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </div>
+  </div>
+
+  <ul class="nav__links" id="nav-links">
+
+    <!-- HOME DROPDOWN -->
+    <li class="dropdown">
+      <a href="index.html">Home</a>
+      <i class="ri-arrow-down-s-line arrow"></i>
+
+      <ul class="dropdown-menu">
+        <li><a href="./index1.html">Home Page 2</a></li>
+      </ul>
+    </li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="login.html">Login</a></li>
+
+  </ul>
+
+</nav>
+<!-- NAVBAR END -->
+
+<header>
+  <div class="container header__container">
+    <div class="header__left">
+      <h1>
+        From beginner to professional, we support every stage of your journey.
+      </h1>
+      <p>Learn, practice, and succeed with confidence.</p>
+    </div>
+
+    <div class="header__right">
+      <div class="header__right-image">
+        <img src="./images/header1.png" alt="Education">
+      </div>
+    </div>
+  </div>
+</header>
+
 
   <section class="categories">
   <div class="container categories__container">
