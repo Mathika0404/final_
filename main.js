@@ -79,3 +79,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate();
 });
+
+
+  const faqs = document.querySelectorAll(".faq");
+
+  faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+      faq.classList.toggle("open");
+
+      // Change + / − icon
+      const icon = faq.querySelector(".faq__icon i");
+      if (faq.classList.contains("open")) {
+        icon.classList.remove("uil-plus");
+        icon.classList.add("uil-minus");
+      } else {
+        icon.classList.remove("uil-minus");
+        icon.classList.add("uil-plus");
+      }
+    });
+  });
+
+
