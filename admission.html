@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education Website</title>
+  <!--ICONSCOUT CDN-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./style1.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<style>
+     body {
+        background-image: url("./images/Medium\ synthetic\ swirl\ finish_\ Nicely\ applied_.jpg");
+    }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+    .admission {
+  padding: 4rem 0;
+}
+
+.admission__container {
+  max-width: 1100px;
+  margin: auto;
+  background: #8fa488;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.admission__left {
+  background: #879c76;
+  padding: 3rem;
+  color: #fff;
+}
+
+.admission__left img {
+  width: 150px;
+  margin-bottom: 1rem;
+  margin-top: -50px;
+  margin-left: 80px;
+}
+
+.admission__left h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.admission__left p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.admission__info p {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.admission__socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.admission__socials a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.admission__socials a:hover {
+  background: #ff5c42;
+  transform: translateY(-3px);
+}
+
+
+/* RIGHT FORM */
+.admission__form {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.admission__form input,
+.admission__form select,
+.admission__form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background: #a9bda2;
+  color: #333;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.admission__form textarea {
+  resize: none;
+}
+
+.admission__form button {
+  width: fit-content;
+  padding: 0.8rem 2rem;
+  background: #ff5c42;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .admission__container {
+    grid-template-columns: 1fr;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+<body>
+<!-- NAVBAR START -->
+<nav class="navbar">
+
+  <div class="nav__header">
+    <div class="nav__logo">
+      <a href="index1.html">
+        <img src="./images/logo.png" alt="logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </div>
+  </div>
+
+  <ul class="nav__links" id="nav-links">
+
+    <!-- HOME DROPDOWN -->
+    <li class="dropdown">
+      <a href="index1.html">Home</a>
+      <i class="ri-arrow-down-s-line arrow"></i>
+
+      <ul class="dropdown-menu">
+        <li><a href="index.html">Home Page 1</a></li>
+      </ul>
+    </li>
+
+    <li><a href="./about.html">About</a></li>
+    <li><a href="admission.html">Admission</a></li>
+    <li><a href="contact1.html">Contact</a></li>
+
+  </ul>
+
+</nav>
+<!-- NAVBAR END -->
+
+<section class="admission">
+  <div class="admission__container">
+
+    <!-- LEFT PANEL -->
+    <aside class="admission__left">
+      <img src="./images/admission_open.webp" alt="Admission">
+
+      <h2>Course Admission</h2>
+      <p>
+        Begin your learning journey with us. Fill out the admission
+        form to enroll in your desired course and build a strong future
+        with expert guidance and practical knowledge.
+      </p>
+
+      <div class="admission__info">
+        <p>📞 +91 6383650365</p>
+        <p>📍 Madurai</p>
+      </div>
+
+<div class="admission__socials">
+  <a href="4041.html"><i class="uil uil-facebook-f"></i></a>
+  <a href="4041.html"><i class="uil uil-instagram"></i></a>
+  <a href="4041.html"><i class="uil uil-twitter"></i></a>
+  <a href="4041.html"><i class="uil uil-linkedin"></i></a>
+</div>
+    </aside>
+
+    <!-- RIGHT FORM -->
+<form class="admission__form" onsubmit="handleSubmit(event)">
+  <div class="form__row">
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+  </div>
+
+  <div class="form__row">
+    <input type="email" id="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Mobile Number" required>
+  </div>
+
+  <select required>
+    <option value="">Select Course</option>
+    <option>Web Development</option>
+    <option>UI/UX Design</option>
+    <option>Python Programming</option>
+    <option>Data Science</option>
+  </select>
+
+  <textarea rows="5" placeholder="Why do you want to join this course?" required></textarea>
+
+  <button type="submit">Apply Now</button>
+</form>
+
+
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__1">
+            <a href="index1.html" class="footer__logo"><h4>STACKLY</h4></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="footer__2">
+            <h4>Permalinks</h4>
+            <ul class="Permalinks">
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="contact1.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__3">
+            <h4>Primary</h4>
+            <ul class="privacy">
+                <li><a href="4041.html">Privacy Policy</a></li>
+                <li><a href="4041.html">Terms and conditions</a></li>
+                <li><a href="4041.html">Refund Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__4">
+            <h4>Contact Us</h4>
+            <div>
+                <p>+91 9047366578</p>
+                <p>info@thestackly.com</p>
+            </div>
+
+            <ul class="footer__socials">
+                <li>
+                    <a href="4041.html"><i class="uil uil-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="4041.html"><i class="uil uil-instagram-alt"></i></a>
+                </li>
+                <li>
+                    <a href="4041.html"><i class="uil uil-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="4041.html"><i class="uil uil-linkedin-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    <!-- Right Side: Map -->
+    <div class="footer-right">
+        <h4>Google Map</h4>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.423930519364!2d80.27071897476289!3d13.082680587241803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e06b1e6c0b%3A0x6a9f5c31d10f6e3!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1696751888888!5m2!1sen!2sin"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; STACKLY</small>
+        </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script1.js"></script>
+<script>
+  const emailInput = document.getElementById("email");
+
+  // Clear error while typing
+  emailInput.addEventListener("input", () => {
+    emailInput.setCustomValidity("");
+  });
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const emailValue = emailInput.value.trim().toLowerCase();
+
+    // Strict .com validation
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/;
+
+    // CLEAR previous error BEFORE checking
+    emailInput.setCustomValidity("");
+
+    if (!emailPattern.test(emailValue)) {
+      emailInput.setCustomValidity(
+        "Please enter a valid email address ending with .com"
+      );
+      emailInput.reportValidity();
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Redirect after successful validation
+    window.location.href = "4041.html";
+  }
+</script>
+
+
+</body>
+</html>
+  
